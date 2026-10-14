@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #193329;
+  background: #f0f6ef;
+}
+
+.container {
+  width: min(720px, 92%);
+  margin: 60px auto;
+}
+
+.hero {
+  background: white;
+  padding: 42px;
+  border-radius: 24px;
+  box-shadow: 0 14px 45px rgba(27, 67, 44, 0.08);
+}
+
+.eyebrow {
+  color: #27814b;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(30px, 5vw, 44px);
+  margin: 12px 0;
+}
+
+p {
+  line-height: 1.7;
+  color: #617168;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 16px;
+  padding: 35px 15px;
+  border: 2px dashed #a6c8ae;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-icon {
+  font-size: 36px;
+  color: #27814b;
+}
+
+input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.preview {
+  display: block;
+  width: min(100%, 340px);
+  max-height: 300px;
+  object-fit: contain;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+button,
+.button-link {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 12px;
+  background: #247744;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.button-link:hover {
+  background: #195b32;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.error {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  color: #922c2c;
+  background: #fff0f0;
+}
+
+.note {
+  margin-top: 22px;
+  font-size: 12px;
+}
+
+.confidence {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.progress {
+  height: 10px;
+  margin: 12px 0 28px;
+  background: #e5eee6;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: #27814b;
+  border-radius: inherit;
+}
+
+.result-card h2 {
+  margin-top: 28px;
+  font-size: 19px;
+}

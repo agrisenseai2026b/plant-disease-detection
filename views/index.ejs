@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant Disease Detection</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">SMART AGRICULTURE</p>
+      <h1>Plant Disease Detection</h1>
+      <p>Upload a leaf image to identify one of the
+         conditions supported by your trained model.</p>
+
+      <% if (error) { %>
+        <div class="error"><%= error %></div>
+      <% } %>
+
+      <form action="/predict" method="POST"
+            enctype="multipart/form-data" id="uploadForm">
+        <label class="upload-box" for="leafImage">
+          <span class="upload-icon">＋</span>
+          <strong id="fileLabel">Choose a leaf image</strong>
+          <span>JPG, PNG or WebP · Maximum 10 MB</span>
+        </label>
+
+        <input id="leafImage" type="file" name="leafImage"
+               accept=".jpg,.jpeg,.png,.webp" required>
+
+        <img id="preview" alt="Selected leaf preview"
+             class="preview" hidden>
+
+        <button id="submitButton" type="submit">
+          Analyze leaf
+        </button>
+      </form>
+
+      <p class="note">
+        Predictions are model estimates, not a substitute
+        for expert crop diagnosis.
+      </p>
+    </section>
+  </main>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero result-card">
+      <p class="eyebrow">ANALYSIS COMPLETE</p>
+      <h1><%= result.title %></h1>
+
+      <p class="prediction">
+        Predicted class: <strong><%= result.prediction %></strong>
+      </p>
+
+      <div class="confidence">
+        <span>Model confidence</span>
+        <strong><%= result.confidence %>%</strong>
+      </div>
+
+      <div class="progress">
+        <div style="width:   <%= Math.max(0, Math.min(100, result.confidence)) %>%"></div>
+      </div>
+
+      <h2>About this result</h2>
+      <p><%= result.description %></p>
+
+      <h2>Suggested next steps</h2>
+      <p><%= result.recommendation %></p>
+
+      <a class="button-link" href="/">Analyze another leaf</a>
+    </section>
+  </main>
+</body>
+</html>
